@@ -1,7 +1,8 @@
 ---
-title: "Course Project1"
+title: "CourseProject1"
 author: "Shey"
 date: "7/17/2021"
+output: html_document
 
 **Course Project 1**
 ====================
