@@ -41,6 +41,9 @@ activity_day <- activity %>% group_by(date) %>% summarise(sum= sum(steps, na.rm=
         filter(sum!= 0)
 hist(activity_day$sum , breaks = length(activity_day$date) , col = "purple",
      main="Steps taken per day" , xlab = "Daily Steps",  ylim = range(0:12))
+     
+     ![image](https://user-images.githubusercontent.com/84548966/126054715-79c5bebe-4f36-4840-a534-1af2aacd8828.png)
+
 summary(activity_day$sum)[3:4]
 ```        
 
