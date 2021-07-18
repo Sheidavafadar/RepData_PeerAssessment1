@@ -45,7 +45,7 @@ hist(activity_day$sum , breaks = length(activity_day$date) , col = "purple",
 summary(activity_day$sum)[3:4]
 ```        
 
-     ![image](https://user-images.githubusercontent.com/84548966/126054715-79c5bebe-4f36-4840-a534-1af2aacd8828.png)
+![plot1](https://user-images.githubusercontent.com/84548966/126054732-b2e7e0b4-084d-475a-89a8-78581f348e77.png)
 
 ### **part 3 (What is the average daily activity pattern?)**
         
