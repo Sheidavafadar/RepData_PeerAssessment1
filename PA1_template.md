@@ -58,6 +58,7 @@ daily<- activity %>% group_by(interval) %>% summarise(average= mean(steps, na.rm
 with(daily, plot(interval, average, type="l" , main="Average Daily Activity Pattern" , ylab=("Average Number of Steps")))        
 daily[which.max(daily$average),]
 ```
+![plot2](https://user-images.githubusercontent.com/84548966/126054747-71fe8e5c-c9f3-4a63-9700-b5bec11c1653.png)
 
 The interval with the most average steps is 835.
 
@@ -93,6 +94,7 @@ hist(imputNA_day$sum , breaks = length(imputNA_day$date) , col = "darkolivegreen
 summary(imputNA_day$sum)[3:4]
 
 ```
+![plot3](https://user-images.githubusercontent.com/84548966/126054749-35914ded-7e24-4cd3-835f-2f6b4d0da4bf.png)
 
 Here both mean and median of steps taken per day became exactly same which was not the case prior to imputing missing values.
 Imputing with mean values make the histogram more normally distributed.
@@ -124,5 +126,6 @@ ggplot(data = wday, mapping = aes(x = interval, y = meanSteps, col="red")) +
         geom_line(size=1) + facet_grid(weekdayType ~ .) + theme_bw()+
         scale_x_continuous("Day Interval", breaks = seq(min(wday$interval), max(wday$interval), 100)) + scale_y_continuous("Average Number of Steps") + ggtitle("Average Number of Steps Taken by Interval")
 ```
+![plot4](https://user-images.githubusercontent.com/84548966/126054756-05bf1e45-8753-4923-a7b8-5f5cdb01b3c6.png)
 
 There are some differences in average steps between Weekdays and Weekends. During weekdays, the person is more active at the start of the day and less active during the day. Meanwhile, during weekends, the person is less active at start of the day and more active throughout the day.
